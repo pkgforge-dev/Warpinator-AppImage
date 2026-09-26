@@ -2,9 +2,9 @@
 
 # Warpinator-AppImage 🐧
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/ArqamQazi/Warpinator/total?logo=github&label=GitHub%20Downloads)](https://github.com/ArqamQazi/Warpinator/releases/latest)
-[![CI Build Status](https://github.com/ArqamQazi/Warpinator/actions/workflows/appimage.yml/badge.svg)](https://github.com/ArqamQazi/Warpinator/releases/latest)
-[![Latest Stable Release](https://img.shields.io/github/v/release/ArqamQazi/Warpinator)](https://github.com/ArqamQazi/Warpinator/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/Warpinator-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/Warpinator/releases/latest)
+[![CI Build Status](https://github.com/pkgforge-dev/Warpinator-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/Warpinator-AppImage/releases/latest)
+[![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/Warpinator-AppImage)](https://github.com/pkgforge-dev/Warpinator-AppImage/releases/latest)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/linuxmint/warpinator/master/data/icons/hicolor/256x256/apps/org.x.Warpinator.png" width="128" alt="Warpinator Logo" />
@@ -12,7 +12,7 @@
 
 | Latest Stable Release | Upstream URL |
 | :---: | :---: |
-| [Click here](https://github.com/ArqamQazi/Warpinator/releases/latest) | [Click here](https://github.com/linuxmint/warpinator) |
+| [Click here](https://github.com/pkgforge-dev/Warpinator-AppImage/releases/latest) | [Click here](https://github.com/linuxmint/Warpinator) |
 
 </div>
 
