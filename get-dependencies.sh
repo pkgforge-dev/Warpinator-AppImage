@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm warpinator glib2-devel
+pacman -Syu --noconfirm warpinator
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"

@@ -22,7 +22,6 @@ quick-sharun \
 	/usr/bin/warpinator*        \
 	/usr/lib/warpinator         \
 	/usr/share/warpinator       \
-	/usr/share/glib-2.0/schemas \
 	/usr/lib/libgtk-3.so*       \
 	/usr/lib/libxapp.so*
 
@@ -32,9 +31,6 @@ sed -i -e 's|/usr|"$APPDIR"|g' ./AppDir/bin/warpinator*
 # Deploy additional .desktop files
 mkdir -p ./AppDir/share/applications
 cp -f /etc/xdg/autostart/warpinator-autostart.desktop ./AppDir/share/applications/
-
-# Compile GSettings schemas for Warpinator and XApp
-glib-compile-schemas ./AppDir/share/glib-2.0/schemas
 
 # Guarantee complete transitive dependency closure for C extensions (e.g. grpcio, cygrpc)
 while :; do
