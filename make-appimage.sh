@@ -12,11 +12,6 @@ export ICON=/usr/share/icons/hicolor/256x256/apps/org.x.Warpinator.png
 export DEPLOY_PYTHON=1
 export DEPLOY_GTK=1
 
-export PATH_MAPPING='
-	/usr/lib/warpinator:${SHARUN_DIR}/lib/warpinator
-	/usr/share/warpinator:${SHARUN_DIR}/share/warpinator
-'
-
 # Deploy dependencies
 quick-sharun \
 	/usr/bin/warpinator*        \
@@ -24,9 +19,6 @@ quick-sharun \
 	/usr/share/warpinator       \
 	/usr/lib/libgtk-3.so*       \
 	/usr/lib/libxapp.so*
-
-# Relocate wrapper scripts
-sed -i -e 's|/usr|"$APPDIR"|g' ./AppDir/bin/warpinator*
 
 # Deploy additional .desktop files
 mkdir -p ./AppDir/share/applications
