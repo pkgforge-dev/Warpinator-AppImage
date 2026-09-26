@@ -1,0 +1,47 @@
+diff -ruN a/usr/bin/warpinator b/usr/bin/warpinator
+--- a/usr/bin/warpinator	2026-09-26 04:28:17.824428863 +0000
++++ b/usr/bin/warpinator	2026-09-26 04:28:23.164550171 +0000
+@@ -1,3 +1,4 @@
+ #!/bin/sh
+-export WARPINATOR_PATH=/usr/lib/warpinator
+-exec /usr/lib/warpinator/warpinator-launch.py $@
++APPDIR="${APPDIR:-$(cd "${0%/*}/.." && pwd)}"
++export WARPINATOR_PATH="$APPDIR/lib/warpinator"
++exec "$WARPINATOR_PATH/warpinator-launch.py" "$@"
+diff -ruN a/usr/bin/warpinator-send b/usr/bin/warpinator-send
+--- a/usr/bin/warpinator-send	2026-09-26 04:28:17.825082689 +0000
++++ b/usr/bin/warpinator-send	2026-09-26 04:28:28.489550097 +0000
+@@ -16,7 +16,7 @@
+ 
+ from gi.repository import GLib, Gio, Gtk, Gdk, GdkX11
+ 
+-src = "/usr/lib/warpinator"
++src = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "lib", "warpinator")
+ sys.path.insert(0, src)
+ 
+ import config
+diff -ruN a/usr/lib/warpinator/config.py b/usr/lib/warpinator/config.py
+--- a/usr/lib/warpinator/config.py	2026-09-26 04:28:17.823760780 +0000
++++ b/usr/lib/warpinator/config.py	2026-09-26 04:28:23.164550171 +0000
+@@ -1,11 +1,15 @@
+ # Generated file - DO NOT EDIT.  Edit config.py.in instead.
+ 
+-prefix="/usr"
+-datadir="share"
+-localedir="/usr/share/locale"
+-pkgdatadir="/usr/share/warpinator"
+-libdir="lib"
+-libexecdir="/usr/lib/warpinator"
++import os
++
++# Resolve the install prefix from this file so the application keeps
++# working when it is relocated, for example inside an AppImage.
++libexecdir = os.path.dirname(os.path.abspath(__file__))
++prefix = os.path.dirname(os.path.dirname(libexecdir))
++datadir = os.path.join(prefix, "share")
++localedir = os.path.join(datadir, "locale")
++pkgdatadir = os.path.join(datadir, "warpinator")
++libdir = os.path.join(prefix, "lib")
+ include_firewall_mod=True
+ bundle_zeroconf=False
+ bundle_grpc=False
