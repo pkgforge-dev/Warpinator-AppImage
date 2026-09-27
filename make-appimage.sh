@@ -22,7 +22,8 @@ quick-sharun \
 	/usr/lib/libre2.so*         \
 	/usr/lib/libcares.so*       \
 	/usr/lib/libsodium.so*      \
-	/usr/lib/libprotobuf.so*
+	/usr/lib/libprotobuf.so*    \
+	/usr/lib/libabsl_*.so*
 
 # Deploy additional .desktop files
 mkdir -p ./AppDir/share/applications
