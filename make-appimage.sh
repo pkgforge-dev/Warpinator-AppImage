@@ -18,7 +18,11 @@ quick-sharun \
 	/usr/lib/warpinator         \
 	/usr/share/warpinator       \
 	/usr/lib/libgtk-3.so*       \
-	/usr/lib/libxapp.so*
+	/usr/lib/libxapp.so*        \
+	/usr/lib/libre2.so*         \
+	/usr/lib/libcares.so*       \
+	/usr/lib/libsodium.so*      \
+	/usr/lib/libprotobuf.so*
 
 # Deploy additional .desktop files
 mkdir -p ./AppDir/share/applications
